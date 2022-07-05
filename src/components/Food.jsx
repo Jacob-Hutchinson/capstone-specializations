@@ -55,6 +55,39 @@ export const Food = (props) => {
   console.log(foodItem);
   return (
     <div className="food">
+      <br />
+      <div className="button">
+        <h3>Find a recipe</h3>
+        <Button variant="contained" color="primary" onClick={getFood}>
+          Get Recipe
+        </Button>
+        <br />
+        <br />
+        <form typeof="submit" onSubmit={handleCategory} style={{display: "flex"}}>
+          <label htmlFor="food">Select by category</label>
+          <select name="food" id="">
+            <option value=""></option>
+            <option value="Breakfast">Breakfast</option>
+            <option value="Side">Side</option>
+            <option value="Pasta">Pasta</option>
+            <option value="Dessert">Dessert</option>
+            <option value="Starter">Starter</option>
+            <option value="Vegan">Vegan</option>
+            <option value="Vegetarian">Vegetarian</option>
+            <option value="Seafood">Seafood</option>
+            <option value="Miscellaneous">Miscellaneous</option>
+            <option value="Beef">Beef</option>
+            <option value="Chicken">Chicken</option>
+            <option value="Lamb">Lamb</option>
+            <option value="Pork">Pork</option>
+          </select> <br />
+          <Button variant="contained" color="primary" size="small" type="submit" value='submit'>
+            Get Category
+          </Button>
+        </form>
+        <h3>OR</h3>
+      <FoodCountry setFoodItem={setFoodItem} setIngredient={setIngredient} foodItem={foodItem} setFood={setFood}/>
+      </div>
       {food && <div className="foodCard">
       {foodItem && (
         <div className="foodcard">
@@ -92,39 +125,6 @@ export const Food = (props) => {
       </a>
       </h2>}
       </div>}
-      <br />
-      <div className="button">
-        <h3>Find a recipe</h3>
-        <Button variant="contained" color="primary" onClick={getFood}>
-          Get Recipe
-        </Button>
-        <br />
-        <br />
-        <form typeof="submit" onSubmit={handleCategory} style={{display: "flex"}}>
-          <label htmlFor="food">Select by category</label>
-          <select name="food" id="">
-            <option value=""></option>
-            <option value="Breakfast">Breakfast</option>
-            <option value="Side">Side</option>
-            <option value="Pasta">Pasta</option>
-            <option value="Dessert">Dessert</option>
-            <option value="Starter">Starter</option>
-            <option value="Vegan">Vegan</option>
-            <option value="Vegetarian">Vegetarian</option>
-            <option value="Seafood">Seafood</option>
-            <option value="Miscellaneous">Miscellaneous</option>
-            <option value="Beef">Beef</option>
-            <option value="Chicken">Chicken</option>
-            <option value="Lamb">Lamb</option>
-            <option value="Pork">Pork</option>
-          </select> <br />
-          <Button variant="contained" color="primary" size="small" type="submit" value='submit'>
-            Get Category
-          </Button>
-        </form>
-        <h3>OR</h3>
-      <FoodCountry setFoodItem={setFoodItem} setIngredient={setIngredient} foodItem={foodItem} setFood={setFood}/>
-      </div>
     </div>
   );
 };
