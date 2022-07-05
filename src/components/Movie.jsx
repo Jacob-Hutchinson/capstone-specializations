@@ -60,11 +60,18 @@ export const Movie = (props) => {
       }
     })
   }
-
+  
   return (
     <div className='movie-div'>
       <br />
       <div className='form'>
+      <MovieCard movie={movie} />
+      {movie ? userID ?
+      <Button variant="contained" color="primary" onClick={addList}>
+        Add to List
+      </Button> : <></> : <></>}
+      {movie ? movie.results.US ?
+      <Providers movie={movie}/> : <></> : <></>}
       <Button variant="contained" color="primary" size='small' onClick={getmovie}>
         Get Random Movie
       </Button> 
@@ -114,13 +121,6 @@ export const Movie = (props) => {
       </div>
       </div>
       <br />
-      <MovieCard movie={movie} />
-      {movie ? userID ?
-      <Button variant="contained" color="primary" onClick={addList}>
-        Add to List
-      </Button> : <></> : <></>}
-      {movie ? movie.results.US ?
-      <Providers movie={movie}/> : <></> : <></>}
       <br />
       <br />
       <br />
