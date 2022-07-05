@@ -1,0 +1,67 @@
+html {
+  background: url(../images/home.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  /* background-attachment: fixed; */
+  background-size: cover;
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  background: url(../images/home.jpeg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  /* background-attachment: fixed; */
+  background-size: cover;
+  /* background-color: #464646; */
+  height: 100vh;
+  /* margin-bottom: 100px; */
+  position: relative;
+}
+.navbar {
+    margin: 1%;
+    margin-top: 3%;
+}
+.Home {
+  background-image: url(../images/home.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #464646;
+  height: 100vh;
+}
+.Movies {
+  background-image: url(../images/movie.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #464646;
+  height: 100vh;
+  overflow-y: scroll;
+}
+.Food {
+  background-image: url(../images/food2.jpeg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+  height: 100vh;
+  overflow-y: scroll;
+}
+.List {
+  background-image: url(../images/home.jpeg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+  height: 100vh;
+}
+.login {
+  position: absolute;
+  right: 10px;
+  margin: 25px;
+  display: flex;
+}
+#login-form {
+  margin: 25px;
+}
