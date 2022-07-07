@@ -8,7 +8,7 @@ export const List = ({userID}) => {
   let [load, setLoad] = useState(0)
 
   useEffect(() => {
-    axios.post(`http://localhost:4004/displayList`, {userID: userID})
+    axios.post(`/displayList`, {userID: userID})
     .then(res => {
       // console.log(res)
       setMovieObj(res.data)
@@ -16,7 +16,7 @@ export const List = ({userID}) => {
   }, [load])
 
   const deleteMovie = (e) => {
-    axios.delete(`http://localhost:4004/list/${e.target.value}`)
+    axios.delete(`/list/${e.target.value}`)
     .then(res => {
       setLoad(load += 1)
     })

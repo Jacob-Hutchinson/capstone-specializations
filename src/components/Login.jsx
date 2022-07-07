@@ -9,7 +9,7 @@ export const Login = ({setLogin, setUser, setUserID}) => {
     const handleForm = e => {
         e.preventDefault()
         // console.log(e.target[0].value) this is the value of the first input element from the form
-        axios.post('http://localhost:4004/login', {user: e.target[0].value, password: e.target[2].value})
+        axios.post('/login', {user: e.target[0].value, password: e.target[2].value})
         .then(res => {
             console.log(res.data)
             setLogin(false)

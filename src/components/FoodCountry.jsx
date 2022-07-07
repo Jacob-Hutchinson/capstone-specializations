@@ -9,7 +9,7 @@ export const FoodCountry = (props) => {
         e.preventDefault()
         console.log(e.target[0].value)
         setFood('true')
-        axios.post(`http://localhost:4004/food2`, {country: e.target[0].value})
+        axios.post(`/food2`, {country: e.target[0].value})
         .then(res => {
             if (foodItem) {
                 setFoodItem();

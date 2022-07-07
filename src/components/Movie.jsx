@@ -22,14 +22,14 @@ export const Movie = (props) => {
 
   const getmovie = (e) => {
     e.preventDefault()
-    axios.get('http://localhost:4004/movie')
+    axios.get('/movie')
     .then(res => {
       setMovie(res.data)
     })
   } 
   const handleForm = (e) => {
     e.preventDefault()
-    axios.post('http://localhost:4004/movie', {genre: genre, date: date, date1: date1})
+    axios.post('/movie', {genre: genre, date: date, date1: date1})
     .then(res => {
       if(res.data.title){
         setMovie(res.data)
@@ -52,7 +52,7 @@ export const Movie = (props) => {
   }
   const addList = e => {
     e.preventDefault()
-    axios.post('http://localhost:4004/list', {id: movie.id, title: movie.title, image: movie.poster_path, UserID: userID})
+    axios.post('/list', {id: movie.id, title: movie.title, image: movie.poster_path, UserID: userID})
     .then(res => {
       console.log(res)
       if(res.data === 'tooManyMovies'){

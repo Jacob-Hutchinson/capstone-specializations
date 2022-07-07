@@ -23,7 +23,7 @@ export const SignIn = ({setSignIn, setUser}) => {
 const handleForm = (e) => {
   e.preventDefault()
   console.log(userName, password)
-axios.post('http://localhost:4004/signin', {userName: userName, password: password})
+axios.post('/signin', {userName: userName, password: password})
 .then(res => {
   // this removes the sign-in form from the page
   setSignIn(false)

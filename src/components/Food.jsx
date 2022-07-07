@@ -20,7 +20,7 @@ export const Food = (props) => {
     e.preventDefault();
     setIngredient('')
     setFood('true')
-    axios.get("http://localhost:4004/food").then((res) => {
+    axios.get("/food").then((res) => {
       if (foodItem) {
         setFoodItem();
         setFoodItem(res.data.meals[0]);
@@ -37,7 +37,7 @@ export const Food = (props) => {
     e.preventDefault()
     console.log(e.target[0].value)
     setFood('true')
-    axios.post("http://localhost:4004/food", {category: e.target[0].value})
+    axios.post("/food", {category: e.target[0].value})
     .then(res => {
       if (foodItem) {
         setFoodItem();
